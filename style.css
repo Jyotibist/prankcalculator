@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     background: linear-gradient(
       180deg,
-      rgba(249, 254, 1, 0.38) 0%,
+      rgba(114, 115, 32, 0.38) 0%,
       rgba(4, 255, 225, 0.36) 100%
     );
     display: flex;
@@ -17,7 +17,8 @@ body {
     align-items: center;
   }
   .calculator {
-    background: rgba(250, 249, 249, 0.506);
+    background: rgba(198, 192, 192, 0.506);
+    backdrop-filter: blur(10px);
     width: 400px;
     color: black;
     padding: 2rem 1.5rem;
@@ -25,6 +26,7 @@ body {
   
     display: grid;
     gap: 1rem;
+    position: relative;
   
     grid-template-areas:
       "display display display display"
@@ -38,14 +40,20 @@ body {
   .calculator div {
     height: 50px;
     /* width: 50px; */
-    background: rgba(207, 204, 204, 0.78);
+    background: rgba(97, 84, 84, 0.58);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   
-  .display {
+  .calculator div.display {
     grid-area: display;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    font-family: 'Nunito', sans-serif;
+
   }
   .btn-ac {
     grid-area: ac;
@@ -103,5 +111,14 @@ body {
   }
   .btn-equals {
     grid-area: equals;
+  }
+  .circle{
+    background: linear-gradient(to right, red, purple);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: 60px;
+    top: 250px;
   }
   
